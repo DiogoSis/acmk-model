@@ -1,0 +1,29 @@
+@startuml acmk
+
+actor "Administrador" as admin
+actor "Aluno" as aluno
+actor "Instrutor" as instrutor
+
+usecase "Cadastrar Aluno" as UC1
+usecase "Cadastrar Instrutor" as UC2
+usecase "Cadastrar Aula" as UC3
+usecase "Realizar Matrícula" as UC4
+usecase "Registrar Pagamento" as UC5
+usecase "Criar Evento" as UC6
+usecase "Registrar Participação" as UC7
+usecase "Visualizar Relatórios" as UC8
+
+admin -- UC1
+admin -- UC2
+admin -- UC3
+admin -- UC6
+admin -- UC8
+
+aluno -- UC4
+aluno -- UC5
+aluno -- UC7
+
+instrutor -- UC4
+instrutor -- UC7
+
+@enduml
